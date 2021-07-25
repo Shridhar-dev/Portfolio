@@ -2,8 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Poppins, 'sans-serif';
+  background-color: #1F1F1F;
+  color:black;
 }
 
 a {
@@ -13,4 +14,40 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.art___gallery___heading{
+  -webkit-text-stroke: 0.1rem white;
+}
+.footer___contact{
+  -webkit-text-stroke: 0.2rem black;
+}
+
+@media screen and (max-width: 1400px) {
+  .head-line{
+    font-size: 15vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .head-line{
+    font-size: 18vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer___contact{
+    font-size: 5vw;
+    -webkit-text-stroke: 0.1rem black;
+  }
+  .footer___email{
+    font-size: 6vw;
+  }
+  .footer___links > h1{
+    font-size: 5vw;
+  }
+}
+@media screen and (min-width: 1401px) {
+  .head-line{
+    font-size: 13.5rem;
+  }
 }
