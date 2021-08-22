@@ -1,4 +1,4 @@
-import House from '../public/cssarts/house.png';
+import House from '../public/cssarts/house.PNG';
 import Stoa from '../public/cssarts/stoa.PNG'
 import OldMan from '../public/cssarts/oldman.png'
 import Git from '../public/cssarts/git.png'
