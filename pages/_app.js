@@ -1,11 +1,12 @@
 import Head from "next/head";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   
   const containerRef = useRef(null)
+  
   return (
     <>
       <Head>

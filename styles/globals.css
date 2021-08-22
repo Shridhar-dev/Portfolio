@@ -22,6 +22,36 @@ a {
 .footer___contact{
   -webkit-text-stroke: 0.2rem black;
 }
+.footer___links > h1{
+  position: relative;
+  transition: 1s;
+}
+.footer___links > h1:hover::after{
+  content: '';
+  position: absolute;
+  height:10%;
+  top:100%;
+  left:0%;
+  background-color: black;
+  animation: widther 1s forwards 0s alternate;
+}
+.header__links > div >h5{
+  transition: 0.4s;
+}
+.header__links > div > h5:hover{
+  padding: 0.5rem 1rem;
+  background: #1F1F1F;
+  color: white;
+}
+
+@keyframes widther {
+    from{
+      width: 0%;
+    }
+    to{
+      width: 100%;
+    }
+}
 
 @media screen and (max-width: 1400px) {
   .head-line{
@@ -32,6 +62,20 @@ a {
   .head-line{
     font-size: 18vw;
   }
+}
+.flow{
+  overflow: hidden;
+  max-height: fit-content;
+}
+
+.testimonial-img{
+  height:fit-content;
+  border-radius:50%;
+  border:0.8rem solid #1DA1F2;
+  max-width:280px;
+  object-fit:contain;
+  margin-top: -15%;
+  
 }
 
 @media screen and (max-width: 900px) {

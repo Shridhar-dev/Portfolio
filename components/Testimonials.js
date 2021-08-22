@@ -21,7 +21,7 @@ function Testimonials() {
                     </div>
                     <div className="carousel-item" style={{overflow:'visible'}}>
                     <div className="d-flex justify-content-center pt-0 mt-0 pt-md-5 mt-md-5"  style={{background:'black',height:'35ch',borderRadius:'10px',margin:'0% 15%',overflow:'visible',maxHeight:'fit-content'}}>
-                        <img src={MyImg.src} className="img-fluid" style={{height:'fit-content',borderRadius:'50%',border:'0.8rem solid #1DA1F2',maxWidth:'280px',objectFit:'contain',marginTop:'-15%'}} width="30%" />
+                        <img src={MyImg.src} className="img-fluid testimonial-img" width="30%" />
                     </div>
                     <div className="carousel-caption pb-5 d-md-block">
                         <h5>Lorem Ipsum</h5>
