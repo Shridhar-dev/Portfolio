@@ -20,6 +20,12 @@ export default function Home() {
       options={
         {
           smooth: true,
+          smartphone:{
+            smooth:true
+          },
+          tablet:{
+            smooth:true
+          }
           // ... all available Locomotive Scroll instance options 
         }
       }
