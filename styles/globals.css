@@ -121,6 +121,9 @@ a {
     opacity: 0;
     width: 0px;
   }
+  body{
+    overflow-y: visible;
+  }
 }
 @media screen and (min-width: 1401px) {
   .head-line{
