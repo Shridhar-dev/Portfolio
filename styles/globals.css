@@ -117,7 +117,10 @@ a {
   .footer___links > h1{
     font-size: 5vw;
   }
-  
+  .c-scrollbar_thumb{
+    opacity: 0;
+    width: 0px;
+  }
 }
 @media screen and (min-width: 1401px) {
   .head-line{
