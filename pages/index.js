@@ -32,6 +32,7 @@ export default function Home() {
       }
       watch={
         [
+          containerRef
           //...all the dependencies you want to watch to update the scroll
         ]
       }
