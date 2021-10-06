@@ -22,11 +22,12 @@ export default function Home() {
           smooth: true,
           smartphone:{
             smooth:true,
-            touchMultiplier:0.1
+            multiplier:5
           },
           tablet:{
             smooth:true
-          }
+          },
+          
           // ... all available Locomotive Scroll instance options 
         }
       }
