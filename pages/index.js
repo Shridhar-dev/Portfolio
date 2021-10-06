@@ -22,7 +22,7 @@ export default function Home() {
           smooth: true,
           smartphone:{
             smooth:true,
-            touchMultiplier:5
+            touchMultiplier:0.1
           },
           tablet:{
             smooth:true
