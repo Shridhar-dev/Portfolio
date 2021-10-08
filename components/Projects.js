@@ -5,7 +5,10 @@ import Project from './Project'
 function Projects(props) {
     return (
         <div className="container text-center py-5 mt-5" style={{position:'relative'}}>
-            <h1 className="display-5 text-center mb-5 pb-2" style={{fontWeight:'700',color:'white'}}>Featured Projects</h1>
+            <div className="display-5 text-center pb-5" style={{fontWeight:'700',color:'white'}}>
+                <span>Featured</span>
+                <span> Projects</span>
+            </div>
             <div className="row mb-5">
                
                <Project src={Gossip.src} title={'Gossip'} text={'A simple chat app'}/>
