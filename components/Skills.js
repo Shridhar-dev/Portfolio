@@ -14,15 +14,15 @@ function Skills() {
         <div className="container text-center  py-5 mt-5" style={{position:'relative',margin:'0% 80%'}}>
             <h1 className="display-5 text-center mb-2 pb-2" style={{fontWeight:'700',color:'white'}}>Skills</h1>
             <div className="d-flex justify-content-center flex-wrap align-items-center">
-                <img src={Next_img.src}  width="80" className="img-fluid mx-3 my-3"/>
-                <img src={React_img.src}  width="80" className="img-fluid mx-3 my-3"/>
-                <img src={Tailwind.src}  width="80" className="img-fluid mx-3 my-3"/>
-                <img src={Bootstrap.src}  width="80" className="img-fluid mx-3 my-3"/>
-                <img src={Firebase.src}  width="60" className="img-fluid mx-3 my-3"/>
-                <img src={JS.src}  width="70" className="img-fluid mx-3 my-3"/>
-                <img src={HTML.src}  width="80" className="img-fluid mx-3 my-3"/>
-                <img src={CSS.src}  width="80" className="img-fluid mx-3 my-3"/>
-                <img src={Wordpress.src}  width="80" className="img-fluid mx-3 my-3"/>
+                <img src={Next_img.src}  width="80" className="img-fluid mx-3 my-3 zoom-skills" alt="Img of nextjs"/>
+                <img src={React_img.src}  width="80" className="img-fluid mx-3 my-3 zoom-skills" alt="Img of reactjs"/>
+                <img src={Tailwind.src}  width="80" className="img-fluid mx-3 my-3 zoom-skills" alt="Img of tailwindcss"/>
+                <img src={Bootstrap.src}  width="80" className="img-fluid mx-3 my-3 zoom-skills" alt="Img of bootstrap"/>
+                <img src={Firebase.src}  width="60" className="img-fluid mx-3 my-3 zoom-skills" alt="Img of firebase"/>
+                <img src={JS.src}  width="70" className="img-fluid mx-3 my-3 zoom-skills" alt="Img of Javascript"/>
+                <img src={HTML.src}  width="80" className="img-fluid mx-3 my-3 zoom-skills" alt="Img of html"/>
+                <img src={CSS.src}  width="80" className="img-fluid mx-3 my-3 zoom-skills" alt="Img of css"/>
+                <img src={Wordpress.src}  width="80" className="img-fluid mx-3 my-3 zoom-skills" alt="Img of wordpress"/>
             </div>    
         </div>
     )

@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Poppins, 'sans-serif';
+  font-family: Poppins, sans-serif;
   background-color: #1F1F1F;
   color:black;
   overflow-y: hidden;
@@ -105,6 +105,12 @@ a {
   width:30%
   
 }
+.zoom-skills{
+  transition: 0.2s;
+}
+.zoom-skills:hover{
+  transform:scale(1.2)
+}
 
 @media screen and (max-width: 900px) {
   .css-scroll{
@@ -113,7 +119,7 @@ a {
     position:relative;
   }
   .footer___contact{
-    font-size: 5vw;
+    font-size: 6vw;
     -webkit-text-stroke: 0.1rem black;
   }
   .footer___email{

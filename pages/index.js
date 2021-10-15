@@ -1,12 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import About from '../components/About'
 import CSSGallery from '../components/CSSGallery'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Projects from '../components/Projects'
 import Testimonials from '../components/Testimonials'
-import { Client, APIErrorCode } from "@notionhq/client"
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { useRef } from "react";
 import Skills from '../components/Skills'
@@ -26,14 +24,11 @@ export default function Home() {
           tablet:{
             smooth:false
           },
-          
-          // ... all available Locomotive Scroll instance options 
         }
       }
       watch={
         [
           containerRef
-          //...all the dependencies you want to watch to update the scroll
         ]
       }
       containerRef={containerRef}
