@@ -8,6 +8,8 @@ import Testimonials from '../components/Testimonials'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { useRef } from "react";
 import Skills from '../components/Skills'
+import Achievements from '../components/Achievements'
+import Misc from '../components/Misc'
 
 export default function Home() {
   
@@ -47,7 +49,9 @@ export default function Home() {
             <About />
             <Skills />
             <CSSGallery />
+            <Achievements />
             <Projects />
+            <Misc />
             <Testimonials />
         </div>
         
