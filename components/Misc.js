@@ -7,8 +7,8 @@ function Misc() {
 
             <div className="mx-5 px-5 text-white text-center">
                 <h2>Published my First NPM Package</h2>
-                <img src={NPM.src} className="img-fluid mt-5" width="700"/>
                 <a href="https://www.npmjs.com/package/react-cursors">
+                    <img src={NPM.src} className="img-fluid mt-5" width="700"/>
                     <h1 className="mt-5" style={{fontWeight:'600',textDecoration:'underline',color:'white'}}>react-cursors</h1>
                 </a>
             </div>
