@@ -53,11 +53,12 @@ a {
 .footer___contact{
   -webkit-text-stroke: 0.2rem black;
 }
-.footer___links > h1{
+.footer___links > a > h1{
   position: relative;
   transition: 1s;
+  color: initial;
 }
-.footer___links > h1:hover::after{
+.footer___links > a > h1:hover::after{
   content: '';
   position: absolute;
   height:10%;

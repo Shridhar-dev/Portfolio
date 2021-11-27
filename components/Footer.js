@@ -11,10 +11,19 @@ function Footer() {
                     shridharkamat10@gmail.com 
                 </div>
                 <div className="d-flex flex-wrap w-100 justify-content-between mt-5 mt-md-5 pt-0 pt-md-5 footer___links" >
-                    <h1>GitHub</h1>
-                    <h1>Twitter</h1>
-                    <h1>LinkedIn</h1>
-                    <h1>CodePen</h1>
+                    <a href="https://github.com/Shridhar-dev">
+                        <h1>GitHub</h1>
+                    </a>
+                    <a href="https://twitter.com/shridhar_kdev">
+                        <h1>Twitter</h1>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shridhar-kamat-1015a41bb/">
+                        <h1>LinkedIn</h1>
+                    </a>
+                    <a href="https://codepen.io/shridhar-dev">
+                        <h1>CodePen</h1>
+                    </a>
+                    
                 </div>
             </div>
         </div>
