@@ -46,14 +46,14 @@ export default function Home() {
         <meta property="og:url" content="http://shridharkamat.dev/"/>
         <meta property="og:title" content="Shridhar Kamat - Portfolio Site"/>
         <meta property="og:description" content="A front-end web developer and freelancer based in Goa"/>
-        <meta property="og:image" content="https://ibb.co/KL3ZMMs"/>
+        <meta property="og:image" content="https://i.ibb.co/0FdNgg9/Frame-3-1.png"/>
 
 
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="http://shridharkamat.dev/"/>
         <meta property="twitter:title" content="Shridhar Kamat - Portfolio Site"/>
         <meta property="twitter:description" content="A front-end web developer and freelancer based in Goa"/>
-        <meta property="twitter:image" content="https://ibb.co/KL3ZMMs"/>
+        <meta property="twitter:image" content="https://i.ibb.co/0FdNgg9/Frame-3-1.png"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div data-scroll-section>
