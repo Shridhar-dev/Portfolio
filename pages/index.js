@@ -37,7 +37,7 @@ export default function Home() {
     >
     <div data-scroll-container ref={containerRef}>
       <Head>
-      <title>Shridhar Kamat - Portfolio Site</title>
+        <title>Shridhar Kamat - Portfolio Site</title>
         <meta name="title" content="Shridhar Kamat - Portfolio Site"/>
         <meta name="description" content="A front-end web developer and freelancer based in Goa"/>
 
@@ -49,12 +49,16 @@ export default function Home() {
         <meta property="og:image" content="thumbnail.png"/>
 
 
-        <meta property="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="Shridhar Kamat - Portfolio Site"/>
+        <meta name="twitter:description" content="A front-end web developer and freelancer based in Goa"/>
+        <meta name="twitter:site" content="@shridhar_kdev"/>
+        <meta name="twitter:image" content="https://i.ibb.co/0FdNgg9/Frame-3-1.png"/>
+        <meta name="twitter:creator" content="@shridhar_kdev"/>
         <meta property="twitter:url" content="https://shridharkamat.dev/"/>
-        <meta property="twitter:title" content="Shridhar Kamat - Portfolio Site"/>
-        <meta property="twitter:description" content="A front-end web developer and freelancer based in Goa"/>
-        <meta property="twitter:image" content="thumbnail.png"/>
+
         <link rel="icon" href="/favicon.ico" />
+
       </Head>
       <div data-scroll-section>
         <Header />
