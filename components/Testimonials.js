@@ -1,10 +1,19 @@
 import Testimonial from './Testimonial'
+import Devraj from '../public/devraj.png'
 
 function Testimonials() {
     return (
         <div className="container  py-5 mt-5" style={{position:'relative'}}>
             <h1 className="display-5 text-center mb-5 pb-2" style={{fontWeight:'700',color:'white'}}>Testimonials</h1>
             <div className="my-5">
+                <Testimonial 
+                    dir="left" 
+                    alt="Img of Devraj Chatribin, Founder of Design and Code" 
+                    name="Devraj Chatribin" 
+                    img={Devraj.src} 
+                    content="I have worked with Shridhar for a very long time. We have collaborated on various web development projects and I am quite impressed with his development skills, and I am sure that he will be of great value to any company that he is a part of."
+                    designation="Founder Design and Code"
+                />
                 <Testimonial 
                     dir="right" 
                     alt="Img of Hrishikesh Pai, Founder of Evolve" 
