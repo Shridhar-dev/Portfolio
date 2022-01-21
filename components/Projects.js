@@ -7,12 +7,12 @@ import Project from './Project'
 
 function Projects() {
     return (
-        <div className="container text-center py-5 mt-5" style={{position:'relative'}}>
-            <div className="display-5 text-center pb-5" style={{fontWeight:'700',color:'white'}}>
+        <div className=" text-center py-5 mt-20 mx-10 md:mx-28" style={{position:'relative'}}>
+            <div className="text-5xl text-center pb-10" style={{fontWeight:'700',color:'white'}}>
                 <span>Featured</span>
                 <span> Projects</span>
             </div>
-            <div className="row mb-5">
+            <div className="grid grid-cols-12 grid-flow-row gap-4 mb-5">
                <Project src={Blockcast.src} title={'Blockcast'} text={'A decentralized podcasting platform'} link="https://blockcast.vercel.app/"/>
                <Project src={PromiseNFT.src} title={'Promise NFT Marketplace'} text={'An nft marketplace that lets you sell your promises'} link="http://promise-nft-marketplace.vercel.app/"/>
                <Project src={DeInstagram.src} title={'Decentralised Instagram'} text={'Decentralized version of Instagram'} link="https://decentralized-instagram.vercel.app/"/>

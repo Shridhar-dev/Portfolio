@@ -63,7 +63,7 @@ export default function Home() {
       <div data-scroll-section>
         <Header />
 
-        <div className="container-fluid d-flex justify-content-center align-items-center flex-column" style={{maxWidth:'1400px',overflow:'hidden'}} >
+        <div className="w-screen mx-auto flex justify-center items-center flex-col" style={{maxWidth:'1400px',overflow:'hidden'}} >
             <About />
             <Skills />
             <CSSGallery />
