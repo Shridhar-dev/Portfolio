@@ -7,7 +7,7 @@
 
 ### 🛠️ Built with
 - Next.js
-- Bootstrap (migrating to tailwind soon)
+- Tailwind CSS 
 
 <hr/>
 
