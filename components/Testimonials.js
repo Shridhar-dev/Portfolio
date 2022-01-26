@@ -1,5 +1,7 @@
 import Testimonial from './Testimonial'
 import Devraj from '../public/devraj.png'
+import Hrishi from '../public/hrishi.png'
+import Gajesh from '../public/gajesh.png'
 
 function Testimonials() {
     return (
@@ -18,7 +20,7 @@ function Testimonials() {
                     dir="right" 
                     alt="Img of Hrishikesh Pai, Founder of Evolve" 
                     name="Hrishikesh Pai" 
-                    img="https://scontent.fgoi1-1.fna.fbcdn.net/v/t1.18169-1/p100x100/21731262_1537301149649797_4992030839776186592_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=7206a8&_nc_ohc=OEYguw-WI30AX-KwMI4&_nc_ht=scontent.fgoi1-1.fna&oh=00_AT8hwhM1HwLsI-MF1DCpryGoLnLDwnHTBkXUXax9093xAA&oe=6205F723" 
+                    img={Hrishi.src} 
                     content="A very talented, hardworking and most importantly punctual professional to work with. You will never get your job done beyond the timeline. Shridhar is Very responsive and innovative."
                     designation="Founder Evolve Media"
                 />
@@ -26,7 +28,7 @@ function Testimonials() {
                     dir="left" 
                     alt="Img of Gajesh Naik, Founder of Gaj Finance and Taksh" 
                     name="Gajesh Naik" 
-                    img="https://pbs.twimg.com/media/E-WgX5aVUAIRhEc?format=jpg&name=small" 
+                    img={Gajesh.src}
                     content="Super Fast Delivery"
                     designation="Founder Gaj Finance and Taksh"
                 />
