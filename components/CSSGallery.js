@@ -57,7 +57,7 @@ function CSSGallery() {
                 <CSSArt src={Drop.src}  width={300} alt="Img of drop made in Pure CSS"/>
             
             </div>
-            <a href="https://codepen.io/shridhar-dev">
+            <a target="_blank" href="/css">
                 <small style={{color:'white',fontSize:'1.3rem',opacity:'0.7'}}><u>Check all of them on codepen</u></small>
             </a>
         </div>

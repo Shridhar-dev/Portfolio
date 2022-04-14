@@ -19,7 +19,7 @@ function Projects() {
                <Project src={Gossip.src} title={'Gossip'} text={'A simple chat app'}  link="https://gossip-5c9ef.web.app/"/>
                <Project src={Discord.src} title={'Discord'} text={'UI clone of Discord'} link="https://disord-clone.netlify.app/"/>         
             </div>
-            <a href="https://shridhar-dev.notion.site/0673abc5fd5a4b759095079e0e7cd289?v=61eeb3fb0a0c4a10ac6a6eceafae6215">
+            <a target="_blank" href="/projects">
                 <small style={{color:'white',fontSize:'1.3rem',opacity:'0.7'}}><u>Check all the projects here </u></small>
             </a>
         </div>
