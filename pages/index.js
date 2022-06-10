@@ -46,7 +46,7 @@ export default function Home() {
         <meta property="og:url" content="https://shridharkamat.dev/"/>
         <meta property="og:title" content="Shridhar Kamat - Portfolio Site"/>
         <meta property="og:description" content="A front-end web developer and freelancer based in Goa"/>
-        <meta property="og:image" content="thumbnail.png"/>
+        <meta property="og:image" content="https://i.ibb.co/0FdNgg9/Frame-3-1.png"/>
 
 
         <meta name="twitter:card" content="summary_large_image"/>
