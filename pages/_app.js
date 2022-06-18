@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap" rel="stylesheet"/> 
         
-        <Script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="shridharkamat" data-description="Support me on Buy me a coffee!" data-message="" data-color="#1DA1F2" data-position="Right" data-x_margin="18" data-y_margin="18"></Script>
+        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="shridharkamat" data-description="Support me on Buy me a coffee!" data-message="" data-color="#1DA1F2" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
       </Head>
       <main >
         <Component {...pageProps} />
