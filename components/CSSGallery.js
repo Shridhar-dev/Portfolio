@@ -24,7 +24,7 @@ function CSSGallery() {
             </div>
 
             {/*First animated row*/}
-            <div className="hidden md:flex mx-12 mx-md-0 mt-12 pt-2 justify-center items-center css-scroll" data-scroll data-scroll-speed="5" data-scroll-repeat data-scroll-direction="horizontal">               
+            <div className="hidden lg:flex mx-12 mx-md-0 mt-12 pt-2 justify-center items-center css-scroll" data-scroll data-scroll-speed="5" data-scroll-repeat data-scroll-direction="horizontal">               
                 <CSSArt src={Crt.src}  width={200} alt="Img of an old CRT monitor made in Pure CSS"/>
                 <CSSArt src={Stoa.src}  width={150} alt="Img of Stoa Logo made in Pure CSS"/>
                 <CSSArt src={OldMan.src} alt="Img of Old Man Illustrations made in Pure CSS"/>
@@ -33,7 +33,7 @@ function CSSGallery() {
             </div>
 
             {/*Hidden animated row*/}
-            <div className="flex md:hidden css-scroll overflow-auto flex-1 px-10">
+            <div className="flex lg:hidden css-scroll overflow-auto flex-1 px-10">
                 <CSSArtSingle src={Crt.src}  width={200} alt="Img of an old CRT monitor made in Pure CSS"/>
                 <CSSArtSingle src={Stoa.src}  width={150} alt="Img of Stoa Logo made in Pure CSS"/>
                 <CSSArtSingle src={OldMan.src} alt="Img of Old Man Illustrations made in Pure CSS"/>
@@ -46,10 +46,10 @@ function CSSGallery() {
                 <CSSArtSingle src={Drop.src}  width={300} alt="Img of drop made in Pure CSS"/>
             </div>
 
-            <small className="block md:hidden pb-12 mb-2 text-left w-full px-10" style={{color:'white',fontSize:'1rem',opacity:'0.7'}}>Scroll ➡️</small>
+            <small className="block lg:hidden pb-12 mb-2 text-left w-full px-10" style={{color:'white',fontSize:'1rem',opacity:'0.7'}}>Scroll ➡️</small>
             
             {/*Second animated row*/}
-            <div className="hidden md:flex mx-12 md:mx-0 my-12 py-2 justify-center items-center css-scroll" data-scroll data-scroll-speed="-5" data-scroll-repeat data-scroll-direction="horizontal">
+            <div className="hidden lg:flex mx-12 md:mx-0 my-12 py-2 justify-center items-center css-scroll" data-scroll data-scroll-speed="-5" data-scroll-repeat data-scroll-direction="horizontal">
                 <CSSArt src={Orbit.src}  width={500} alt="Img of Orbit made in Pure CSS"/>
                 <CSSArt src={Android.src}  width={200} alt="Img of Android made in Pure CSS"/>
                 <CSSArt src={AarogyaSetu.src} width={300} alt="Img of Aarogya Setu Logo made in Pure CSS"/>
