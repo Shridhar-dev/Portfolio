@@ -17,14 +17,11 @@ gsap.registerPlugin(ScrollTrigger);
 function Hero() {
   return (
     <section className="w-full h-screen flex items-center justify-center flex-col relative hero-container overflow-hidden bg-black">
-        <div className="relative z-[12]">
-          <p className="text-9xl font-bold font-sans name-text">Shridhar Kamat</p>
-          <div className="rainbow-globe gradient-cta hover:bg-right-bottom hover:brightness-150 duration-300 w-40 h-40 p-5 rounded-b-full  absolute bottom-10 right-10 z-[11]">
-            <div className=" border border-dashed flex items-center justify-center  border-black w-full h-full rounded-full">
-              <Asterisk className="h-1/2 w-1/2 text-black" />
-            </div>
-          </div>
+        <div className="relative z-[12] text-center">
+          <p className="text-9xl font-bold name-text duration-500 mt-28 font-silk">Shridhar Kamat</p>
+          <p className="text-4xl w-2/3 mt-10 mx-auto opacity-0 desc-text">Full-stack developer crafting performant, intuitive digital experiences. I build scalable web apps that merge design with functionality. Bringing creative solutions to life with code and curiosity.</p>
         </div>
+        
         <div className="absolute top-0 w-full h-full aspect-borders border-t-[100px] border-b-[100px] border-black z-[10]"></div>
         <Canvas style={{height:"100vh", position:"absolute"}} className="hero" camera={{ position: [-30, 10, 0], rotation:[0,-Math.PI/2,0], fov: 50 }}>
             <Suspense fallback={null}>
@@ -49,9 +46,10 @@ function SphereModel() {
   });
 
   useGSAP(() => {
-    const containerOuter = document.querySelector(".hero-sphere");
+    const containerOuter = document.querySelector(".hero-container");
     const aspectBorders = document.querySelector(".aspect-borders");
     const nameText = document.querySelector(".name-text");
+    const descText = document.querySelector(".desc-text");
     const gradientCta = document.querySelector(".gradient-cta");
     let isBorderVisible = true;
     const tl = gsap.timeline({
@@ -62,7 +60,6 @@ function SphereModel() {
                 scrub: 5,
                 pin: document.querySelector(".hero-container"),
                 invalidateOnRefresh: true,
-                markers:true,
                 onUpdate: (self) => {
                   if (self.progress >= 0.95) {
                     gsap.to(aspectBorders, {
@@ -98,42 +95,56 @@ function SphereModel() {
       ease: "power2.out",
     })
 
+
     tl
-    .to(nameText,{
-      opacity:0,
+    .to(nameText, {
+      opacity: 0,
       duration: 1,
-    })
-    .to(gradientCta,{
-      left: "50%",
-      translateX: "-50%",
-    })
+      ease: "power2.in",
+    },0)
     .to(sphere.current.position, {
-      x: -100,
-      duration: 2,
+      x: -50,
+      duration: 10,
       ease: "power2.in",
     },0)
     .to(sphereCover.current.position, {
-      x: -100,
-      duration: 2,
+      x: -50,
+      duration: 10,
       ease: "power2.in",
     },0)
     .to(sphere2.current.position, {
-      x: -100,
-      duration: 2,
+      x: -50,
+      duration: 10,
       ease: "power2.in",
     },0)
+    .to(nameText, {
+      opacity: 1,
+      duration: 1,
+      ease: "power2.out",
+    })
     .to(containerOuter,{
       color: "#000000",
       backgroundColor: "#ffffff",
-      duration: 1,
+      duration: 2,
     })
+    .to(nameText, {
+      marginTop:0,
+      duration: 1,
+      ease: "power2.out",
+    }, "-=1")
+    .to(descText, {
+      display: "block",
+      opacity: 1,
+      duration: 1,
+      ease: "power2.out",
+    }, "-=1")
 
   }, { scope: sphere });   
 
   return (
     <>
     <mesh position={[0,0,0]} castShadow receiveShadow ref={sphere}>
-      <sphereGeometry  args={[8]} />
+      <sphereGeometry  args={[10]} />
       <meshPhongMaterial
         color="#ffffff"
         wireframe={true}
@@ -141,16 +152,16 @@ function SphereModel() {
         wireframeLinejoin="miter"
       />
     </mesh>
-    <mesh position={[0,0,0]} castShadow receiveShadow ref={sphereCover} scale={0.99}>
-      <sphereGeometry  args={[8]} />
+    <mesh position={[0,0,0]} castShadow receiveShadow ref={sphereCover} scale={0.97}>
+      <sphereGeometry  args={[10]} />
       <meshPhongMaterial
         color="#000000"
         wireframeLinewidth={100}
         wireframeLinejoin="miter"
       />
     </mesh>
-    <mesh position={[0,10,0]} castShadow receiveShadow ref={sphere2} scale={0.98}>
-      <sphereGeometry  args={[8]} />
+    <mesh position={[0,10,0]} castShadow receiveShadow ref={sphere2} scale={0.95}>
+      <sphereGeometry  args={[10]} />
       <meshPhongMaterial
         color="white"
         transparent={true}

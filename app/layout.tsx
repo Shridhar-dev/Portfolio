@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Silkscreen } from "next/font/google";
 import "./globals.css";
+import { ReactLenis } from "../lib/lenis";
+
+const silk = Silkscreen({
+  variable: "--font-silk",
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,12 +30,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ReactLenis root>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} ${silk.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    </ReactLenis>
   );
 }
