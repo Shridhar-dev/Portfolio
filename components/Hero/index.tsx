@@ -1,27 +1,70 @@
 'use client'
 
-import { OrbitControls } from "@react-three/drei"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { Suspense } from "react"
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
-import { is } from "@react-three/fiber/dist/declarations/src/core/utils";
-import { Asterisk, GithubIcon, Globe2Icon } from "lucide-react";
 import { TextureLoader } from "three";
 import * as THREE from "three";
+import Link from "next/link";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 function Hero() {
+  const container = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLDivElement>(null);
+  useGSAP(() => {
+    const containerEl = container.current
+    const videoEl = videoRef.current
+   
+    if (!containerEl || !videoEl) return
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = containerEl.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+
+      gsap.to(videoEl, {
+        duration: 0.5,
+        x: (x - videoEl.clientWidth) /10,
+        y: (y - videoEl.clientHeight) /10,
+        transformOrigin: "translate(-50%, -50%)",
+        ease: "power4.out",
+      })
+    }
+
+    containerEl.addEventListener("mousemove", handleMouseMove)
+
+    return () => {
+      containerEl.removeEventListener("mousemove", handleMouseMove)
+    }
+  }, { scope: container })
   return (
-    <section className="w-full h-screen flex items-center justify-center flex-col relative hero-container overflow-hidden bg-black">
-        <div className="relative z-[12] text-center">
-          <p className="text-9xl font-bold name-text duration-500 mt-28 font-silk">Shridhar Kamat</p>
-          <p className="text-4xl w-2/3 mt-10 mx-auto opacity-0 desc-text">Full-stack developer crafting performant, intuitive digital experiences. I build scalable web apps that merge design with functionality. Bringing creative solutions to life with code and curiosity.</p>
+    <section ref={container} className="w-full h-screen flex items-center justify-center flex-col  hero-container overflow-hidden bg-black">
+        <div className="relative z-[12] px-10 md:px-20  mix-blend-difference">
+          <p className="text-4xl sm:text-7xl md:text-8xl text-left font-bol name-text duration-500 mt-28 font-silk">Turning <span className="text-primary font-bold">ideas</span> into purposeful, <span className="text-primary font-bold">human-centered</span> experiences.</p>
+          <p className="text-xl sm:text-2xl md:text-4xl w-full sm:w-2/3 mt-10 opacity-0 desc-text text-left leading-12">Building visually refined and accessible experiences that align <br/> with brand vision and deliver measurable business value.</p>
+          <div className="flex items-center gap-5 mt-10">
+            <Link href={"https://www.linkedin.com/in/shridhar-kamat-1015a41bb/"} className="text-md md:text-xl">LINKEDIN</Link>
+            <Link href={"https://github.com/Shridhar-dev"} className="text-md md:text-xl">GITHUB</Link>
+            <Link href={"https://www.linkedin.com/in/shridhar-kamat-1015a41bb/"} className="text-md md:text-xl">RESUME</Link>
+            <Link href={"https://www.linkedin.com/in/shridhar-kamat-1015a41bb/"} className="text-md md:text-xl">EMAIL</Link>
+          </div>
         </div>
-        
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-20 right-20 h-[20rem] w-[50rem] object-contain z-0 hidden md:block hero-video opacity-0"
+          //@ts-ignore
+          ref={videoRef}
+        >
+          <source src="/collage.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
         <div className="absolute top-0 w-full h-full aspect-borders border-t-[100px] border-b-[100px] border-black z-[10]"></div>
         <Canvas style={{height:"100vh", position:"absolute"}} className="hero" camera={{ position: [-30, 10, 0], rotation:[0,-Math.PI/2,0], fov: 50 }}>
             <Suspense fallback={null}>
@@ -35,9 +78,9 @@ function Hero() {
 }
 
 function SphereModel() {
-  const sphere = useRef();
-  const sphere2 = useRef();
-  const sphereCover = useRef();
+  const sphere = useRef<THREE.Mesh>(null);
+  const sphere2 = useRef<THREE.Mesh>(null);
+  const sphereCover = useRef<THREE.Mesh>(null);
   useFrame(() => {
     if (sphere.current && sphere2.current) {
       sphere.current.rotation.y += 0.005;
@@ -50,7 +93,7 @@ function SphereModel() {
     const aspectBorders = document.querySelector(".aspect-borders");
     const nameText = document.querySelector(".name-text");
     const descText = document.querySelector(".desc-text");
-    const gradientCta = document.querySelector(".gradient-cta");
+    const video = document.querySelector(".hero-video");
     let isBorderVisible = true;
     const tl = gsap.timeline({
             scrollTrigger: {
@@ -83,13 +126,19 @@ function SphereModel() {
                 }
             }
       });
-    gsap.to(sphere.current.position, {
+    gsap.to(sphere.current?.position!, {
       y: 10,
       duration: 1,
       ease: "power2.out",
     });
 
-    gsap.to(sphereCover.current.position, {
+    gsap.to(sphere2.current?.position!, {
+      y: 10,
+      duration: 1,
+      ease: "power2.out",
+    });
+
+    gsap.to(sphereCover.current?.position!, {
       y:10,
       duration: 1,
       ease: "power2.out",
@@ -102,17 +151,17 @@ function SphereModel() {
       duration: 1,
       ease: "power2.in",
     },0)
-    .to(sphere.current.position, {
+    .to(sphere.current?.position!, {
       x: -50,
       duration: 10,
       ease: "power2.in",
     },0)
-    .to(sphereCover.current.position, {
+    .to(sphereCover.current?.position!, {
       x: -50,
       duration: 10,
       ease: "power2.in",
     },0)
-    .to(sphere2.current.position, {
+    .to(sphere2.current?.position!, {
       x: -50,
       duration: 10,
       ease: "power2.in",
@@ -123,12 +172,17 @@ function SphereModel() {
       ease: "power2.out",
     })
     .to(containerOuter,{
-      color: "#000000",
-      backgroundColor: "#ffffff",
+      color: "#ffffff",
+      backgroundColor: "#000000",
       duration: 2,
     })
     .to(nameText, {
       marginTop:0,
+      duration: 1,
+      ease: "power2.out",
+    }, "-=1")
+    .to(video, {
+      opacity:1,
       duration: 1,
       ease: "power2.out",
     }, "-=1")
@@ -143,7 +197,7 @@ function SphereModel() {
 
   return (
     <>
-    <mesh position={[0,0,0]} castShadow receiveShadow ref={sphere}>
+    <mesh position={[0,0,0]} ref={sphere}>
       <sphereGeometry  args={[10]} />
       <meshPhongMaterial
         color="#ffffff"
@@ -152,7 +206,7 @@ function SphereModel() {
         wireframeLinejoin="miter"
       />
     </mesh>
-    <mesh position={[0,0,0]} castShadow receiveShadow ref={sphereCover} scale={0.97}>
+    <mesh position={[0,0,0]} ref={sphereCover} scale={0.97}>
       <sphereGeometry  args={[10]} />
       <meshPhongMaterial
         color="#000000"
@@ -160,13 +214,19 @@ function SphereModel() {
         wireframeLinejoin="miter"
       />
     </mesh>
-    <mesh position={[0,10,0]} castShadow receiveShadow ref={sphere2} scale={0.95}>
+    <mesh position={[0,0,0]} ref={sphere2} scale={0.95}>
       <sphereGeometry  args={[10]} />
       <meshPhongMaterial
         color="white"
         transparent={true}
         side={THREE.BackSide}
         map={new TextureLoader().load('/roles.png')}
+        map-repeat={new THREE.Vector2(2, 2)}
+        map-wrapS={THREE.RepeatWrapping}
+        map-wrapT={THREE.RepeatWrapping}
+        map-anisotropy={16}
+        map-magFilter={THREE.NearestFilter}
+        map-minFilter={THREE.NearestFilter}
       />
     </mesh>
     </>

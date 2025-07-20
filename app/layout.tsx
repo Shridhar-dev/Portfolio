@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Silkscreen } from "next/font/google";
+import { Geist, Geist_Mono, Major_Mono_Display } from "next/font/google";
 import "./globals.css";
 import { ReactLenis } from "../lib/lenis";
 
-const silk = Silkscreen({
+const silk = Major_Mono_Display({
   variable: "--font-silk",
   weight: "400",
   subsets: ["latin"],
