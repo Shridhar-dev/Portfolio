@@ -97,6 +97,7 @@ function SphereModel() {
     let isBorderVisible = true;
     const tl = gsap.timeline({
             scrollTrigger: {
+                id: `project-hero`,
                 trigger: document.querySelector(".hero"),
                 start: "top top",
                 end: "bottom top",
@@ -123,9 +124,12 @@ function SphereModel() {
                     });
                     isBorderVisible = true;
                   }
-                }
+                },
+                
             }
       });
+
+    
     gsap.to(sphere.current?.position!, {
       y: 10,
       duration: 1,
@@ -192,7 +196,8 @@ function SphereModel() {
       duration: 1,
       ease: "power2.out",
     }, "-=1")
-
+    
+  
   }, { scope: sphere });   
 
   return (

@@ -158,7 +158,7 @@ skillElement.innerHTML = `<p class="text-xl -rotate-90 font-semibold">${skill.na
   }
 
   return (
-    <div className='h-screen p-5  overflow-hidden  bg-black text-white'>
+    <div className='h-screen p-5 relative overflow-hidden  bg-black text-white'>
       <div className='h-full w-full absolute top-0 left-0' ref={canvas}></div>
       <p className='text-[20rem] text-center text-primary font-silk font-bold z-20 pointer-events-none'>SKILLS</p>
     </div>

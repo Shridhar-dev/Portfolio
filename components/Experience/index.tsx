@@ -7,28 +7,28 @@ const experiences = [
         logo: FroverLogo,
         company: "Frover Labs",
         role: "Software Developer Intern",
-        period: "Jan 2023 - Present",
+        period: "July 2024 - Dec 2024",
         alt: "Frover Labs Logo",
     },
     {
         logo: Social3Logo,
         company: "Social3",
         role: "Frontend Developer Intern",
-        period: "Jul 2022 - Dec 2022",
+        period: "Jun 2023 - Oct 2023",
         alt: "Social3 Logo",
     },
     {
         logo: Social3Logo,
         company: "Social3",
         role: "Frontend Developer Intern",
-        period: "Jul 2022 - Dec 2022",
+        period: "Jul 2022 - Aug 2022",
         alt: "Social3 Logo",
     },
     {
         logo: DesignAndCodeLogo,
-        company: "Design & Code",
-        role: "UI Designer",
-        period: "Jan 2022 - Jun 2022",
+        company: "Design & Code Community",
+        role: "Developer (Volunteer)",
+        period: "Jan 2021 - Jan 2023",
         alt: "Design & Code Logo",
     },
 ]
@@ -48,7 +48,7 @@ function ExperiencePage() {
   )
 }
 
-function Experience({company,role,logo,period}: {company: string, role: string, logo: StaticImageData, period: string}) {
+function Experience({company,role,logo,period}: {company: string, role: string, logo: any, period: string}) {
     return (
         <div className='border-b font-black py-14 px-10 text-4xl flex items-center justify-between'>
             <div className='flex items-center gap-5'>
